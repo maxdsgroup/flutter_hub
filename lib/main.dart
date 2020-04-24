@@ -4,6 +4,8 @@ import 'package:provider/provider.dart';
 import 'themes/theme.dart';
 import 'model/article.dart';
 import 'model/articleHolder.dart';
+import 'package:news_app/screens/login.dart';
+import 'package:news_app/screens/news.dart';
 
 void main() {
   runApp(MyApp());
@@ -25,6 +27,9 @@ class MyApp extends StatelessWidget {
         theme: appTheme,
         initialRoute: '/',
         routes: {
+          '/': (context) => MyLogin(),
+          '/news': (context) => News(),
+          //'/cart': (context) => MyCart(),
         },
       ),
     );
