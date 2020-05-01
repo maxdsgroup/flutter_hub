@@ -1,13 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:hive/hive.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
 import 'themes/theme.dart';
-import 'model/article.dart';
 import 'model/articleHolder.dart';
 import 'package:news_app/screens/login.dart';
 import 'package:news_app/screens/news.dart';
+import 'package:news_app/model/article.dart';
+import 'dart:convert';
 
-void main() {
+const String NewsBox = "NewsBox";
+void main() async {
+  await Hive.initFlutter();
+  Hive.registerAdapter(ArticleAdapter());
+
+  await Hive.openBox<Article>(NewsBox);
+
   runApp(MyApp());
 }
 
@@ -23,13 +32,13 @@ class MyApp extends StatelessWidget {
         ),
       ],
       child: MaterialApp(
-        title: 'News Demo',
+        title: 'News App',
         theme: appTheme,
         initialRoute: '/',
         routes: {
           '/': (context) => MyLogin(),
           '/news': (context) => News(),
-          //'/cart': (context) => MyCart(),
+          //'/other': (context) => Other(),
         },
       ),
     );

@@ -1,4 +1,4 @@
-import 'dart:js';
+import 'dart:js' show context;
 
 import 'package:flutter/foundation.dart';
 import 'package:news_app/services/api.dart';
@@ -9,12 +9,9 @@ class ArticlesHolder extends ChangeNotifier {
   
   List<Article> _articles = [];
 
-  /// Internal, private state of the cart. Stores the ids of each item.
-  final List<String> _sourceIds = [];
-
   ArticlesHolder(){
     ApiClass api = new ApiClass();
-    api.fetchArticles(context).then((value)=> articles= value);
+    api.fetchArticles(context).then((value)=> articles = value);
     notifyListeners();
   }
 
@@ -24,8 +21,7 @@ class ArticlesHolder extends ChangeNotifier {
     notifyListeners();
   }
 
-
-  /// List of items in the cart.
+  /// List of items
   List<Article> get items => _articles;
 
 }
