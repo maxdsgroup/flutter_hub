@@ -1,6 +1,5 @@
 import 'package:hive/hive.dart';
-import 'package:news_app/model/article.dart';
-import 'package:news_app/model/article.dart';
+import 'package:flutter_hub/model/article.dart';
 
 import '../main.dart';
 

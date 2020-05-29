@@ -1,6 +1,6 @@
 {
-    "name": "news_app",
-    "short_name": "news_app",
+    "name": "flutter_hub",
+    "short_name": "flutter_hub",
     "start_url": ".",
     "display": "minimal-ui",
     "background_color": "#0175C2",

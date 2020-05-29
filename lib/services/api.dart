@@ -5,7 +5,7 @@ import 'package:dio/dio.dart';
 import 'package:dio_flutter_transformer/dio_flutter_transformer.dart';
 import 'package:dio_http_cache/dio_http_cache.dart';
 // import 'package:http/http.dart' as http;
-import 'package:news_app/model/article.dart';
+import 'package:flutter_hub/model/article.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 
 const String API = "http://newsapi.org/v2/";
@@ -46,8 +46,8 @@ class ApiClass {
       ));
   }
 
-
-  Future<List<Article>> fetchArticles(context) async {
+  // Future<List<Article>> fetchArticles(context) async {
+  Future<List<Article>> fetchArticles() async {
   Response response = await dio.get(TOP_HEADLINES,
       options: buildCacheOptions(Duration(seconds: 30)));
   //  return response.data['articles'].map<Article>((json) =>

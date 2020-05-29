@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/model/articleHolder.dart';
+import 'package:flutter_hub/model/articleHolder.dart';
 import 'package:provider/provider.dart';
 
 class ArticleDetail extends StatelessWidget {

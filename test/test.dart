@@ -1,5 +1,5 @@
 import 'package:test/test.dart';
-import 'package:news_app/counter.dart';
+import 'package:flutter_hub/counter.dart';
 
 
 void main(){

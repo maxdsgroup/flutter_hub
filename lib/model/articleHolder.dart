@@ -1,7 +1,7 @@
-import 'dart:js' show context;
+// import 'dart:js' show context;
 
 import 'package:flutter/foundation.dart';
-import 'package:news_app/services/api.dart';
+import 'package:flutter_hub/services/api.dart';
 
 import 'article.dart';
 
@@ -11,7 +11,8 @@ class ArticlesHolder extends ChangeNotifier {
 
   ArticlesHolder(){
     ApiClass api = new ApiClass();
-    api.fetchArticles(context).then((value)=> articles = value);
+    //api.fetchArticles(context).then((value)=> articles = value);
+    api.fetchArticles().then((value)=> articles = value);
     notifyListeners();
   }
 

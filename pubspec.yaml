@@ -1,21 +1,21 @@
-name: news_app
-description: A new Flutter project.
+name: flutter_hub
+description: A new Flutter Hub project.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `pub publish`. This is preferred for private packages.
-publish_to: "none" # Remove this line if you wish to publish to pub.dev
+# publish_to: "none" # Remove this line if you wish to publish to pub.dev
 
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
     
   http: ^0.12.0+4
-  test: ^1.14.2
+  # test: ^1.14.2
   dio: ^3.0.9
   dio_flutter_transformer: ^3.0.2
   dio_http_cache: ^0.2.6
@@ -24,14 +24,19 @@ dependencies:
   cupertino_icons: ^0.1.3
   hive: ^1.4.1+1
   hive_flutter: ^0.3.0+2
+  flutter_google_maps: ^3.7.0
 
 dev_dependencies:
-  # hive_generator: ^0.7.0+2
-  # build_runner: ^1.9.0
-  flutter_test:
-    sdk: flutter
+  hive_generator: ^0.7.0+2
+  build_runner: ^1.9.0
+  # flutter_test:
+  #   sdk: flutter
 
 flutter:
   uses-material-design: true
   assets:
     - images/
+  fonts:
+    - family: Bimby
+      fonts:
+        - asset: fonts/Bimby.ttf
